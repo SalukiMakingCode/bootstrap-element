@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>Bootstrap element</title>
+    <meta name="description" content="A serie of element ready to use"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="./assets/scss/style.css" rel="stylesheet"/>
+</head>
+
+<body>
+
+<!-- Nav Bar -->
+
+<!--
+option 1 : permet de centrer le contenu de la nav bar au même niveau que le reste du site
+-->
+<div class="bg-dark">
+    <div class="container">
+        <div class="row">
+<!-- fin option 1 : ne pas oublier de fermer les tags à la fin -->
+
+<!-- option 2 :
+<nav class="col navbar navbar-expand-md navbar-dark">
+utilise navbar-expend-md pour choisir a partir de quel taille utilisé le menu burger (xs / sm / md / lg / xl )
+-->
+<nav class="col navbar navbar-expand-md navbar-dark">
+    <!-- option 3 : Ajouter un logo (image) dans la navbar-brand
+    -->    <img src="./assets/img/logo.png" width="40" height="30" alt="Site logo">  <!--
+Fin option 3 -->
+    <a class="navbar-brand" href="index.html">&nbsp; Nom de marque</a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbarContent" class="collapse navbar-collapse">
+        <ul class="navbar-nav">
+<!-- option 3 : placer le "nav-item active" sur la page affichée   -->
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">Accueil</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Lien 2</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Lien 3</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Lien 4</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- tag de fin option 1 -->
+        </div>
+    </div>
+</div>
+<!-- fin de tag de fin option 1 -->
+
+<!-- Fin Nav Bar -->
+
+
+<!-- Début jumbotron  -->
+
+<!-- option 1 : affiché le jumbotron centré. ne pas oublié de fermer les tags et ré-indenter le jumbotron
+    <div class="container">
+    <div class="row">  -->
+
+<article class="col jumbotron">
+    <h1>Titre</h1>
+</article>
+
+<!-- Fin option 1
+    </div>
+</div> -->
+<!-- Fin jumbotron  -->
+
+
+<!-- Début card full width-->
+<div class="card">
+    <div class="card-body">
+        <h2 class="card-title">Titre de la carte</h2>
+        <p class="card-text">Contenu textuel de la carte</p>
+    </div>
+</div>
+<!-- Fin card full width -->
+
+<br/><br/>
+
+<!-- Début card : full width sur gsm, 3 cards par ligne sur pc et tablette-->
+
+<!-- si la card n'est pas placée dans un container, il apparaitra un espace vide sur la droite de l'écran-->
+<div class="container">
+  <div class="row">
+    <div class="col">
+        <div class="row">
+
+        <div class="col-12 col-md-4">
+            <div class="card">
+                <!-- option 2 : pour que l'image prennent la largeur totale de la card, placé l'image ici plutot qu'en dessous de card-body -->
+                <div class="card-body">
+                    <img class="card-img-top" src="https://via.placeholder.com/200x150?text=Here-an-image" alt="..."/>
+                    <h2 class="card-title">Titre 1</h2>
+                    <p class="card-text">Description de la card numéro 1</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <img class="card-img-top" src="https://via.placeholder.com/200x150?text=Here-an-image" alt="..."/>
+                    <h2 class="card-title">Titre 2</h2>
+                    <p class="card-text">Description de la card numéro 2</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <img class="card-img-top" src="https://via.placeholder.com/200x150?text=Here-an-image" alt="..."/>
+                    <h2 class="card-title">Titre 3</h2>
+                    <p class="card-text">Description de la card numéro 3</p>
+                </div>
+            </div>
+        </div>
+
+        </div>
+    </div>
+  </div>
+</div>
+
+<!-- Début card : full width sur gsm, 3 cards par ligne sur pc et tablette-->
+
+<br/><br/>
+
+<!-- Début démo bouton // marche aussi avec les balises liens  <a href> </a>-->
+<button type="button" class="btn btn-primary">Primary</button>
+<button type="button" class="btn btn-secondary">Secondary</button>
+<button type="button" class="btn btn-success">Success</button>
+<button type="button" class="btn btn-danger">Danger</button>
+<button type="button" class="btn btn-warning">Warning</button>
+<button type="button" class="btn btn-info">Info</button>
+<button type="button" class="btn btn-light">Light</button>
+<button type="button" class="btn btn-dark">Dark</button>
+<button type="button" class="btn btn-link">Link</button>
+
+<!-- fin démo bouton -->
+
+<br/><br/><br/>
+
+
+<!-- Début carrousel simple -->
+<!-- option 1 : affiché le carrousel centré. ne pas oublié de fermer les tags et ré-indenter le carrousel -->
+<div class="container">
+<div class="row">
+<div class="col">
+    <!-- fin option 1 : ne pas oublier de fermer les tags à la fin -->
+
+<div class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="https://via.placeholder.com/900x350?text=Here-an-image-1" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="https://via.placeholder.com/900x350?text=Here-an-image-2" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="https://via.placeholder.com/900x350?text=Here-an-image-3" class="d-block w-100" alt="...">
+        </div>
+    </div>
+</div>
+<!-- fin option 1 -->
+</div>
+</div>
+</div>
+<!-- Fin carrousel simple -->
+
+
+</body>
+</html>
